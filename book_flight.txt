@@ -1,0 +1,85 @@
+section class=pt-0
+	div class=container
+		div class=row
+			!-- Main content START --
+			div class=col-xl-8 col-xxl-9 mx-auto w-100
+				div class=vstack gap-4
+					!-- Ticket item START --
+					div class=card border
+						!-- Card body --
+						div class=card-body p-4 pb-0
+							!-- Ticket item START --
+							div class=row g-4
+                            !-- Airport detail --
+                            php
+                            $sql = 'SELECT f., c.iata, c.city
+                                    FROM Flight f
+                                    JOIN cities c ON f.departure = c.city
+                                    WHERE f.departure= AND f.arrival= AND f.departure_date= 
+                                    ORDER BY f.Price';
+                            $stmt = mysqli_prepare($conn, $sql);
+                            mysqli_stmt_bind_param($stmt, 'sss', $departure, $arrival, $departure_date);
+                            mysqli_stmt_execute($stmt);
+                            $result = mysqli_stmt_get_result($stmt);
+
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                $formatted_departure_time = date(hi A, strtotime($row['departure_time']));
+                            
+                                div class=col-sm-4 col-md-3
+                                    h4= $formatted_departure_time h4
+                                    p class=mb-0php $formatted_departure_date = date('D, j M.', strtotime($departure_date)); echo $formatted_departure_date;br
+                                    = $row['iata']  - = $row['city'] p
+                                div
+                                !-- Time --
+                                div class=col-sm-4 col-md-3 my-sm-auto text-center
+                                !-- Time --
+                                    h5= $row['duration'] h5
+                                    div class=position-relative my-4
+                                        !-- Line --
+                                        hr class=bg-primary opacity-5 position-relative
+                                        !-- Icon --
+                                        div class=icon-md bg-primary text-white rounded-circle position-absolute top-50 start-50 translate-middle
+                                            i class=fa-solid fa-fw fa-plane rtl-flipi
+                                        div
+                                    div
+                                div
+                                !-- Airport detail --
+                                php
+                                $sql = 'SELECT f., c.iata, c.city
+                                        FROM Flight f
+                                        JOIN cities c ON f.arrival = c.city
+                                        WHERE f.departure= AND f.arrival= AND f.departure_date= 
+                                        ORDER BY f.Price';
+                                $stmt = mysqli_prepare($conn, $sql);
+                                mysqli_stmt_bind_param($stmt, 'sss', $departure, $arrival, $departure_date);
+                                mysqli_stmt_execute($stmt);
+                                $result = mysqli_stmt_get_result($stmt);
+
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    $formatted_arrival_time = date(hi A, strtotime($row['arrival_time']));
+                                    $formatted_arrival_date = date('D, j M.', strtotime($row['arrival_date']));
+                                
+                                div class=col-sm-4 col-md-3
+                                    h4= $formatted_arrival_time h4
+                                    p= $formatted_arrival_date br
+                                    = $row['iata']  - = $row['city'] p
+                                div
+                                !-- Price --
+                                div class=col-md-3 text-md-end
+                                    h4₹ php echo number_format($row['price'], 2, '.', ','); h4
+                                    a href=flight-detail.html class=btn btn-dark mb-0 mb-sm-2Book Nowa
+                                div
+                            div
+                            !-- Ticket item END --
+                        div
+                    div
+                div
+            div
+        div
+    div
+section
+php
+    }
+  }
+
+
