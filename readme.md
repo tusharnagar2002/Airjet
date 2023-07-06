@@ -1,7 +1,9 @@
 **Airline Reservation System (Airjet)**
+
 Airjet is an online airline reservation system that simplifies the flight booking process, providing users with a convenient platform to book flights, receive email confirmations, and access e-tickets. The system also includes an admin control panel for managing flights and bookings.
 
 **Installation**
+
 Clone the repository to your local machine:
 git clone https://github.com/yourusername/airjet.git
 
@@ -18,6 +20,7 @@ In your browser, access the Airjet application by entering the following URL:
 http://localhost/Airjet
 
 **Usage**
+
 Visit the Airjet website in your browser.
 
 Create a new account or log in if you already have one.
