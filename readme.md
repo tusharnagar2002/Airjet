@@ -1,32 +1,60 @@
-**Log on to codeastro.com for more projects!***
+**Airline Reservation System (Airjet)**
+Airjet is an online airline reservation system that simplifies the flight booking process, providing users with a convenient platform to book flights, receive email confirmations, and access e-tickets. The system also includes an admin control panel for managing flights and bookings.
 
-**Database Name: ofbsphp**
+**Installation**
+Clone the repository to your local machine:
+git clone https://github.com/yourusername/airjet.git
 
-**Developed by Sujoy Dcunha, Christina Pereira, Mark Coutinho**
+Move the cloned project folder to the Xampp's htdocs directory: C:/Xampp/htdocs/Airjet
 
-**Recommended PHP Version 5.6, 7.4**
+Start Apache and MySQL servers in Xampp.
 
+Open your browser and navigate to http://localhost/phpmyadmin.
 
-**Admin Login Details**
+Create a new database named "airjet_db.sql" and import the provided SQL file located in the "Database" directory of the repository.
 
-Username: admin
-Password: codeastro.com
+In your browser, access the Airjet application by entering the following URL:
 
+http://localhost/Airjet
 
-# **Online Flight Booking Management System**
+**Usage**
+Visit the Airjet website in your browser.
 
-## Required PHP Version: >= 7.4
+Create a new account or log in if you already have one.
 
-=================================================
-**Originally Developed By:Sujoy Dcunha, Christina Pereira, Mark Coutinho**
-**Downloaded @: codeastro.com**
-=================================================
-This is a modified copy. Some error occurred while running the project using PHP v8.1 and MariaDB 10.24.
-Modifcations and changes are mostly done on the front-end side (UI/UX)
-Backend Script Modification has been done also.
+Search for available flights using the provided search form.
 
+Select your preferred flight and proceed to booking.
 
-=================================================
-## **Default Admin Access**
-**username: admin**
-**password: admin123**
+Enter passenger details and payment information to complete the booking process.
+
+Upon successful booking, you will receive an email confirmation and an e-ticket.
+
+Admin users can access the admin control panel to manage flights, bookings, and user information.
+
+**Features**
+
+Flight booking with search and filtering options
+Email confirmation for bookings
+E-ticket generation
+Admin control panel for managing flights and bookings
+User authentication and account management
+
+**Technologies**
+
+HTML
+CSS
+Bootstrap
+JavaScript
+PHP
+
+**Documentation**
+
+For detailed information on the Airjet system, please refer to the blackbook.pdf file included in the repository.
+
+**Support/Contact**
+
+For any support or inquiries regarding the Airjet system, please email work.tusharnagar@gmail.com with "AIRJET" mentioned in the subject line.
+
+**Acknowledgement**
+The theme for Airjet is based on the template provided by https://booking.webestica.com/index-flight.html.
